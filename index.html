@@ -115,8 +115,10 @@ body{-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
 .f-date{background:#fff;border:5px solid #14264A;border-radius:30px;padding:14px 28px;transform:rotate(1deg);box-shadow:0 12px 0 #14264A;display:flex;flex-direction:column;gap:6px}
 .f-date .r{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .f-brands{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-top:10px}
-.f-brands div{height:66px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:5px}
+.f-brands div{height:58px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:5px}
 .f-brands img{max-width:100%;max-height:100%}
+.f-addr{font-size:32px;font-weight:600;line-height:1.2;text-align:center}
+.f-addr b{display:inline-block;background:#14264A;color:#FFD447;font-size:38px;font-weight:700;padding:2px 18px;border-radius:999px;margin-inline-start:6px;transform:rotate(-2deg)}
 .f-contact{margin-top:auto;background:#14264A;color:#fff;border-radius:24px;padding:14px 24px;display:flex;flex-direction:column;gap:10px}
 .f-contact .r{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .ph{display:flex;align-items:center;gap:12px}
@@ -223,7 +225,10 @@ body{-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
               <span class="ltr" style="font-size:92px;font-weight:700;line-height:.9;color:#FF5A36;letter-spacing:-1px" id="fDate"></span>
               <div style="display:flex;flex-direction:column;align-items:flex-start"><span style="font-size:22px">בין השעות</span><span class="ltr" style="font-size:44px;font-weight:700" id="fTime"></span></div>
             </div>
-            <div style="font-size:24px;text-align:center;border-top:3px dotted #14264A;padding-top:8px" id="fAddr"></div>
+            <div style="display:flex;align-items:center;justify-content:center;gap:12px;border-top:3px dotted #14264A;padding-top:10px">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="#FF5A36" stroke="#14264A" stroke-width="1.6" stroke-linejoin="round" style="flex-shrink:0"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.6" fill="#fff"/></svg>
+              <div class="f-addr" id="fAddr"></div>
+            </div>
           </div>
           <div class="f-brands rel" id="fBrands"></div>
           <div class="f-contact rel">
@@ -293,7 +298,7 @@ body{-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
     $('fTime').textContent = (o.tStart && o.tEnd) ? (o.tStart+'–'+o.tEnd) : (o.tStart||o.tEnd||'');
     var addr=$('fAddr'); addr.textContent='';
     var parts=[o.street, o.landmark].filter(Boolean).join(', ');
-    if(parts){ addr.appendChild(document.createTextNode(parts + (o.city?' · ':''))); }
+    if(parts){ addr.appendChild(document.createTextNode(parts + (o.city?' ':''))); }
     if(o.city){ var b=document.createElement('b'); b.textContent=o.city; addr.appendChild(b); }
     [1,2,3].forEach(function(i){
       var p=o['p'+i], t=o['d'+i], el=$('burst'+i);
