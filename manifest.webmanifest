@@ -1,0 +1,18 @@
+{
+  "name": "פלייר נעלי יורם",
+  "short_name": "פלייר יורם",
+  "description": "מחולל פליירים למכירות נעלי יורם",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF7DA",
+  "theme_color": "#FFD447",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

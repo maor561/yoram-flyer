@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>פלייר נעלי יורם</title>
+<meta name="theme-color" content="#FFD447">
+<meta name="description" content="מחולל פליירים למכירות נעלי יורם">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="פלייר יורם">
+<style>
+@font-face{font-family:'Fredoka';font-style:normal;font-display:swap;font-weight:400;src:url(fonts/fredoka-hebrew-400-normal.woff2) format('woff2');unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'Fredoka';font-style:normal;font-display:swap;font-weight:500;src:url(fonts/fredoka-hebrew-500-normal.woff2) format('woff2');unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'Fredoka';font-style:normal;font-display:swap;font-weight:600;src:url(fonts/fredoka-hebrew-600-normal.woff2) format('woff2');unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'Fredoka';font-style:normal;font-display:swap;font-weight:700;src:url(fonts/fredoka-hebrew-700-normal.woff2) format('woff2');unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'Fredoka';font-style:normal;font-display:swap;font-weight:400;src:url(fonts/fredoka-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Fredoka';font-style:normal;font-display:swap;font-weight:500;src:url(fonts/fredoka-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Fredoka';font-style:normal;font-display:swap;font-weight:600;src:url(fonts/fredoka-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Fredoka';font-style:normal;font-display:swap;font-weight:700;src:url(fonts/fredoka-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  --navy:#14264A; --yellow:#FFD447; --coral:#FF5A36; --cream:#FFF7DA; --white:#FFFFFF; --muted:#4A5878; --line:#D9D2B8;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--cream);color:var(--navy);font-family:'Fredoka','Segoe UI',Arial,sans-serif;font-size:16px;line-height:1.4;padding-inline:16px;padding-block:calc(16px + env(safe-area-inset-top,0px)) calc(24px + env(safe-area-inset-bottom,0px))}
+.app{max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+header.top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+header.top img{height:46px;background:var(--white);border-radius:12px;padding:4px 10px;box-shadow:0 4px 0 var(--navy)}
+header.top h1{margin:0;font-size:28px;font-weight:700;text-wrap:balance}
+header.top p{margin:0;color:var(--muted);font-size:16px}
+.grid{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:880px){.grid{grid-template-columns:minmax(0,1fr)}}
+
+.panel{background:var(--white);border:3px solid var(--navy);border-radius:22px;box-shadow:0 6px 0 var(--navy);padding:18px;display:flex;flex-direction:column;gap:18px}
+fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+legend{font-size:14px;font-weight:600;letter-spacing:1px;color:var(--coral);margin-bottom:8px;padding:0}
+.row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.field{display:flex;flex-direction:column;gap:4px}
+.field label{font-size:15px;font-weight:500}
+.field .hint{font-size:13px;color:var(--muted)}
+input[type=text],input[type=date],input[type=time],input[type=number]{font:inherit;font-size:17px;color:var(--navy);background:var(--cream);border:2px solid var(--line);border-radius:12px;padding:9px 12px;width:100%;min-height:46px}
+input:focus-visible,button:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+input:focus{border-color:var(--navy)}
+.auto{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--yellow);border-radius:999px;padding:3px 12px;font-size:15px;font-weight:600}
+.deal{display:grid;grid-template-columns:96px minmax(0,1fr);gap:8px}
+.deal input[type=number]{direction:ltr;text-align:center}
+.toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--cream);border-radius:14px;padding:10px 14px;cursor:pointer}
+.toggle input{position:absolute;opacity:0;width:1px;height:1px}
+.switch{width:52px;height:30px;border-radius:999px;background:var(--line);position:relative;flex-shrink:0;transition:background .2s}
+.switch::after{content:"";position:absolute;top:3px;right:3px;width:24px;height:24px;border-radius:50%;background:var(--white);box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.toggle input:checked + .switch{background:var(--navy)}
+.toggle input:checked + .switch::after{transform:translateX(-22px)}
+.toggle input:focus-visible + .switch{outline:3px solid var(--coral);outline-offset:2px}
+.actions{display:flex;flex-direction:column;gap:10px}
+.btn{font:inherit;font-size:19px;font-weight:600;border:0;border-radius:16px;padding:14px 18px;min-height:52px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px}
+.btn-primary{background:var(--coral);color:var(--white);box-shadow:0 5px 0 var(--navy)}
+.btn-primary:active{transform:translateY(3px);box-shadow:0 2px 0 var(--navy)}
+.btn-secondary{background:var(--navy);color:var(--white)}
+.btn[disabled]{opacity:.6;cursor:wait}
+.status{font-size:15px;min-height:1.4em;color:var(--muted)}
+.preview-col{display:flex;flex-direction:column;gap:10px;position:sticky;top:calc(12px + env(safe-area-inset-top,0px))}
+@media (max-width:880px){.preview-col{position:static}}
+.preview-label{font-size:14px;font-weight:600;letter-spacing:1px;color:var(--muted)}
+.stage{width:100%;max-width:620px;position:relative;overflow:hidden;border-radius:14px;box-shadow:0 10px 30px rgba(20,38,74,.2)}
+.stage .flyer{position:absolute;top:0;right:0;transform-origin:top right}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+html{-webkit-text-size-adjust:100%}
+body{-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
+@media (max-width:880px){
+  body{padding-bottom:calc(120px + env(safe-area-inset-bottom,0px))}
+  header.top h1{font-size:22px}
+  header.top p{font-size:14px}
+  header.top img{height:38px}
+  .preview-col{order:-1}
+  .stage{max-width:420px;margin-inline:auto}
+  .preview-label{text-align:center}
+  .actions{position:fixed;left:0;right:0;bottom:0;z-index:10;background:rgba(255,247,218,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:2px solid var(--navy);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));flex-direction:row;flex-wrap:wrap;gap:8px}
+  .actions .btn{flex:1 1 0;font-size:17px;padding:12px;min-height:50px}
+  .actions .status{flex-basis:100%;text-align:center;font-size:14px;min-height:0}
+  .actions .status:empty{display:none}
+  input[type=text],input[type=date],input[type=time],input[type=number]{font-size:16px}
+}
+@media (display-mode:standalone){header.top{padding-top:4px}}
+
+/* ---------- flyer (1080×1350) ---------- */
+.flyer{width:1080px;height:1350px;padding:34px 52px 28px;background-color:#FFD447;background-image:radial-gradient(#FFE58A 18%,transparent 19%);background-size:64px 64px;direction:rtl;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden;font-family:'Fredoka',sans-serif;color:#14264A;line-height:1.2}
+.flyer .rel{position:relative}
+.f-top{display:flex;justify-content:space-between;align-items:flex-start}
+.f-logo{background:#fff;border-radius:18px;padding:6px 16px;transform:rotate(4deg);box-shadow:0 6px 0 #14264A}
+.f-logo img{height:54px;display:block;max-width:none}
+.f-title{display:flex;flex-direction:column;margin-top:-30px;transform:rotate(-3deg);transform-origin:right center}
+.f-title .t1{font-size:84px;font-weight:700;line-height:1;color:#FF5A36;text-shadow:4px 0 0 #fff,-4px 0 0 #fff,0 4px 0 #fff,0 -4px 0 #fff,3px 3px 0 #fff,-3px -3px 0 #fff,3px -3px 0 #fff,-3px 3px 0 #fff,0 10px 0 #14264A}
+.f-title .t2{margin:0;font-size:150px;font-weight:700;line-height:.95;color:#14264A;letter-spacing:-2px;text-shadow:5px 0 0 #fff,-5px 0 0 #fff,0 5px 0 #fff,0 -5px 0 #fff,4px 4px 0 #fff,-4px -4px 0 #fff,4px -4px 0 #fff,-4px 4px 0 #fff,0 12px 0 #FF5A36}
+.f-shoes{position:relative;height:300px;flex-shrink:0}
+.f-shoes img{position:absolute;max-width:none;filter:drop-shadow(0 14px 10px rgba(20,38,74,.35))}
+.burst{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;clip-path:polygon(100% 50%,90.2% 58%,96.2% 69.1%,84.1% 72.8%,85.4% 85.4%,72.8% 84.1%,69.1% 96.2%,58% 90.2%,50% 100%,42% 90.2%,30.9% 96.2%,27.2% 84.1%,14.6% 85.4%,15.9% 72.8%,3.8% 69.1%,9.8% 58%,0% 50%,9.8% 42%,3.8% 30.9%,15.9% 27.2%,14.6% 14.6%,27.2% 15.9%,30.9% 3.8%,42% 9.8%,50% 0%,58% 9.8%,69.1% 3.8%,72.8% 15.9%,85.4% 14.6%,84.1% 27.2%,96.2% 30.9%,90.2% 42%)}
+.burst b{font-size:40px;line-height:1;direction:ltr}
+.burst span{font-size:16px;line-height:1.1;max-width:96px;font-weight:500}
+.b1{left:150px;top:0;width:156px;height:156px;background:#FF5A36;color:#fff;transform:rotate(-10deg)}
+.b2{left:0;top:80px;width:164px;height:164px;background:#14264A;color:#FFD447;transform:rotate(8deg)}
+.b3{left:140px;top:155px;width:156px;height:156px;background:#fff;color:#14264A;transform:rotate(-4deg)}
+.f-pills{display:flex;flex-wrap:wrap;gap:10px 12px}
+.pill{border-radius:999px;padding:6px 18px;font-size:22px;font-weight:600}
+.p-w{background:#fff;border:3px solid #14264A}.p-c{background:#FF5A36;color:#fff}.p-n{background:#14264A;color:#fff}
+.f-fighter{background:#14264A;color:#fff;border:4px solid #fff;border-radius:22px;padding:10px 22px;display:flex;align-items:center;gap:18px;transform:rotate(-1.5deg);box-shadow:0 10px 0 #FF5A36}
+.f-fighter .ic{width:64px;height:64px;flex-shrink:0;border-radius:50%;background:#FFD447;display:flex;align-items:center;justify-content:center}
+.f-date{background:#fff;border:5px solid #14264A;border-radius:30px;padding:14px 28px;transform:rotate(1deg);box-shadow:0 12px 0 #14264A;display:flex;flex-direction:column;gap:6px}
+.f-date .r{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.f-brands{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-top:10px}
+.f-brands div{height:66px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:5px}
+.f-brands img{max-width:100%;max-height:100%}
+.f-contact{margin-top:auto;background:#14264A;color:#fff;border-radius:24px;padding:14px 24px;display:flex;flex-direction:column;gap:10px}
+.f-contact .r{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.ph{display:flex;align-items:center;gap:12px}
+.ph .ic{width:48px;height:48px;border-radius:50%;background:#FF5A36;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ph .who{display:flex;flex-direction:column;line-height:1.1}
+.ltr{direction:ltr;unicode-bidi:isolate}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <img src="img/yoram.png" alt="Yoram Shoes">
+    <div>
+      <h1>מחולל פליירים למכירה</h1>
+      <p>ממלאים את פרטי המכירה, הפלייר מתעדכן, ושומרים תמונה מוכנה לוואטסאפ.</p>
+    </div>
+  </header>
+
+  <div class="grid">
+    <form class="panel" id="form" novalidate>
+      <fieldset>
+        <legend>מתי</legend>
+        <div class="field">
+          <label for="date">תאריך המכירה</label>
+          <input type="date" id="date" required>
+          <div class="auto" aria-live="polite"><span class="chip" id="autoDay">יום ראשון</span><span class="chip" id="autoHeb">כ״ד באלול</span></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="tStart">משעה</label><input type="time" id="tStart" step="900"></div>
+          <div class="field"><label for="tEnd">עד שעה</label><input type="time" id="tEnd" step="900"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>איפה</legend>
+        <div class="field"><label for="city">ישוב</label><input type="text" id="city" autocomplete="off"></div>
+        <div class="field"><label for="street">כתובת</label><input type="text" id="street" autocomplete="off"></div>
+        <div class="field"><label for="landmark">ליד (לא חובה)</label><input type="text" id="landmark" autocomplete="off"><span class="hint">למשל: ליד פארק המוסיקה</span></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>פינת המבצעים</legend>
+        <span class="hint">עד 3 מבצעים. שורה ריקה לא תופיע. אם כולן ריקות, המדבקות לא יופיעו.</span>
+        <div class="deal"><input type="number" id="p1" inputmode="numeric" min="0" aria-label="מחיר מבצע 1" placeholder="₪"><input type="text" id="d1" aria-label="תיאור מבצע 1" maxlength="22" placeholder="תיאור קצר"></div>
+        <div class="deal"><input type="number" id="p2" inputmode="numeric" min="0" aria-label="מחיר מבצע 2" placeholder="₪"><input type="text" id="d2" aria-label="תיאור מבצע 2" maxlength="22" placeholder="תיאור קצר"></div>
+        <div class="deal"><input type="number" id="p3" inputmode="numeric" min="0" aria-label="מחיר מבצע 3" placeholder="₪"><input type="text" id="d3" aria-label="תיאור מבצע 3" maxlength="22" placeholder="תיאור קצר"></div>
+      </fieldset>
+
+      <label class="toggle" for="fighter">
+        <span><b>כרטיס Fighter</b><br><span class="hint">להציג את הפס "מקבלים כרטיס Fighter"</span></span>
+        <input type="checkbox" id="fighter"><span class="switch" aria-hidden="true"></span>
+      </label>
+
+      <div class="actions">
+        <button type="button" class="btn btn-primary" id="shareBtn" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+          שיתוף לוואטסאפ
+        </button>
+        <button type="button" class="btn btn-primary" id="saveBtn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>
+          שמירה כתמונה
+        </button>
+        <div class="status" id="status" role="status"></div>
+      </div>
+    </form>
+
+    <div class="preview-col">
+      <div class="preview-label">תצוגה מקדימה · 1080×1350</div>
+      <div class="stage" id="stage">
+        <div class="flyer" id="flyer">
+          <div class="f-top rel">
+            <span style="font-size:18px">בס״ד</span>
+            <div class="f-logo"><img src="img/yoram.png" alt="Yoram Shoes"></div>
+          </div>
+          <div class="f-title rel">
+            <div class="t1">מכירת</div>
+            <div class="t2">נעלי יורם</div>
+          </div>
+          <div class="f-shoes">
+            <img src="img/chelsea.png" alt="" style="right:0;top:10px;height:275px;transform:rotate(-5deg)">
+            <img src="img/source.png" alt="" style="right:250px;top:0;width:250px;transform:rotate(6deg)">
+            <img src="img/kidsboot.png" alt="" style="right:500px;top:0;height:215px;transform:rotate(5deg)">
+            <img src="img/adidas.png" alt="" style="right:245px;top:140px;width:340px;transform:rotate(-3deg)">
+            <div class="burst b1" id="burst1"><b id="bp1"></b><span id="bd1"></span></div>
+            <div class="burst b2" id="burst2"><b id="bp2"></b><span id="bd2"></span></div>
+            <div class="burst b3" id="burst3"><b id="bp3"></b><span id="bd3"></span></div>
+          </div>
+          <div class="f-pills rel">
+            <span class="pill p-w" style="transform:rotate(-2deg)">נעלי שבת לבנות</span>
+            <span class="pill p-c" style="transform:rotate(2deg)">דמוי בלנסטון 22–46</span>
+            <span class="pill p-n" style="transform:rotate(-1deg)">סנדלי שורש 28–48</span>
+            <span class="pill p-w" style="transform:rotate(3deg)">נעלי ספורט לכל המשפחה</span>
+          </div>
+          <div class="f-fighter rel" id="fFighter">
+            <div class="ic"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#14264A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <div style="display:flex;flex-direction:column">
+              <span style="font-size:34px;font-weight:700;line-height:1.1">מקבלים כרטיס <span style="color:#FFD447">Fighter</span></span>
+              <span style="font-size:21px;font-weight:500;opacity:.9">הארנק הדיגיטלי למשרתי המילואים · תודה שאתם שומרים עלינו</span>
+            </div>
+          </div>
+          <div class="f-date rel">
+            <div class="r">
+              <div style="display:flex;flex-direction:column"><span style="font-size:36px;font-weight:700" id="fDay"></span><span style="font-size:26px;color:#FF5A36;font-weight:600" id="fHeb"></span></div>
+              <span class="ltr" style="font-size:92px;font-weight:700;line-height:.9;color:#FF5A36;letter-spacing:-1px" id="fDate"></span>
+              <div style="display:flex;flex-direction:column;align-items:flex-start"><span style="font-size:22px">בין השעות</span><span class="ltr" style="font-size:44px;font-weight:700" id="fTime"></span></div>
+            </div>
+            <div style="font-size:24px;text-align:center;border-top:3px dotted #14264A;padding-top:8px" id="fAddr"></div>
+          </div>
+          <div class="f-brands rel" id="fBrands"></div>
+          <div class="f-contact rel">
+            <div class="r">
+              <div class="ph"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div class="who"><span style="font-size:20px;color:#FFD447">יורם</span><b class="ltr" style="font-size:36px">052-3359768</b></div></div>
+              <div class="ph"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div class="who"><span style="font-size:20px;color:#FFD447">אדיר</span><b class="ltr" style="font-size:36px">052-8811650</b></div></div>
+            </div>
+            <div class="r" style="border-top:2px solid rgba(255,255,255,.2);padding-top:10px;font-size:22px">
+              <span style="display:flex;align-items:center;gap:8px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD447" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg><b class="ltr">yoram0166@gmail.com</b></span>
+              <span style="display:flex;align-items:center;gap:8px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD447" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><b class="ltr">yoramshoes.co.il</b></span>
+              <span style="background:#FFD447;color:#14264A;font-weight:600;padding:3px 14px;border-radius:999px;font-size:20px">משלוחים עד הבית</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="lib/html-to-image.js"></script>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var brands = ['skech_adidas','source','nike','blundstone','saucony','papaya','teva','naot','elefanten','tevanaot','redback','redapple','fila','nt'];
+  var fb = $('fBrands');
+  brands.forEach(function(b){ var d=document.createElement('div'); var i=document.createElement('img'); i.src='img/brand_'+b+'.png'; i.alt=''; d.appendChild(i); fb.appendChild(d); });
+
+  var DEFAULTS = { date:'2026-09-06', tStart:'16:00', tEnd:'19:00', city:'שדרות', street:'רחוב המגינים 21', landmark:'ליד פארק המוסיקה',
+    p1:'100', d1:'נעלי ספורט', p2:'130', d2:'פפאיה ונמרוד', p3:'100', d3:'סנדלי בן ישי', fighter:true };
+  var KEY='yoram-flyer-v1';
+  var ids=['date','tStart','tEnd','city','street','landmark','p1','d1','p2','d2','p3','d3'];
+
+  function load(){ var s=null; try{ s=JSON.parse(localStorage.getItem(KEY)); }catch(e){} return Object.assign({}, DEFAULTS, s||{}); }
+  function persist(v){ try{ localStorage.setItem(KEY, JSON.stringify(v)); }catch(e){} }
+  var v = load();
+  ids.forEach(function(k){ $(k).value = v[k] || ''; });
+  $('fighter').checked = !!v.fighter;
+
+  function gematria(n){
+    var ones=['','א','ב','ג','ד','ה','ו','ז','ח','ט'], tens=['','י','כ','ל'];
+    var s = n===15 ? 'טו' : n===16 ? 'טז' : tens[Math.floor(n/10)] + ones[n%10];
+    return s.length===1 ? s+'׳' : s.slice(0,-1)+'״'+s.slice(-1);
+  }
+  function hebDate(d){
+    try{
+      var parts=new Intl.DateTimeFormat('he-IL-u-ca-hebrew',{day:'numeric',month:'long'}).formatToParts(d);
+      var day=+parts.find(function(p){return p.type==='day';}).value;
+      var mon=parts.find(function(p){return p.type==='month';}).value;
+      return gematria(day)+' ב'+mon;
+    }catch(e){ return ''; }
+  }
+  function parseDate(s){ var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s||''); return m ? new Date(+m[1], +m[2]-1, +m[3], 12) : null; }
+
+  function read(){
+    var o={}; ids.forEach(function(k){ o[k]=$(k).value.trim(); }); o.fighter=$('fighter').checked; return o;
+  }
+  function render(){
+    var o=read(); persist(o);
+    var d=parseDate(o.date);
+    var day = d ? new Intl.DateTimeFormat('he-IL',{weekday:'long'}).format(d) : '';
+    var heb = d ? hebDate(d) : '';
+    $('autoDay').textContent = day || 'בחר תאריך';
+    $('autoHeb').textContent = heb || '—';
+    $('fDay').textContent = day;
+    $('fHeb').textContent = heb;
+    $('fDate').textContent = d ? (d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear()) : '';
+    $('fTime').textContent = (o.tStart && o.tEnd) ? (o.tStart+'–'+o.tEnd) : (o.tStart||o.tEnd||'');
+    var addr=$('fAddr'); addr.textContent='';
+    var parts=[o.street, o.landmark].filter(Boolean).join(', ');
+    if(parts){ addr.appendChild(document.createTextNode(parts + (o.city?' · ':''))); }
+    if(o.city){ var b=document.createElement('b'); b.textContent=o.city; addr.appendChild(b); }
+    [1,2,3].forEach(function(i){
+      var p=o['p'+i], t=o['d'+i], el=$('burst'+i);
+      var show = !!(p || t);
+      el.hidden = !show;
+      el.style.display = show ? '' : 'none';
+      $('bp'+i).textContent = p ? p+'₪' : '';
+      $('bd'+i).textContent = t;
+    });
+    $('fFighter').style.display = o.fighter ? '' : 'none';
+    fit();
+  }
+
+  var stage=$('stage'), flyer=$('flyer');
+  function fit(){ var s=stage.clientWidth/1080; flyer.style.transform='scale('+s+')'; stage.style.height=(1350*s)+'px'; }
+  if(window.ResizeObserver){ new ResizeObserver(fit).observe(stage); } else { window.addEventListener('resize', fit); }
+
+  $('form').addEventListener('input', render);
+  $('form').addEventListener('change', render);
+  $('form').addEventListener('submit', function(e){ e.preventDefault(); });
+
+  function fileName(){ var o=read(); return 'yoram-sale-'+(o.date||'flyer')+'.png'; }
+  async function makeBlob(){
+    await document.fonts.ready;
+    var opts={ width:1080, height:1350, pixelRatio:1, cacheBust:false, style:{ transform:'none', position:'static' } };
+    await htmlToImage.toBlob(flyer, opts); // first pass warms image/font cache (Safari)
+    return htmlToImage.toBlob(flyer, opts);
+  }
+  function setBusy(b, msg){ $('saveBtn').disabled=b; $('shareBtn').disabled=b; $('status').textContent=msg||''; }
+
+  $('saveBtn').addEventListener('click', async function(){
+    setBusy(true,'מכין את התמונה…');
+    try{
+      var blob=await makeBlob();
+      var url=URL.createObjectURL(blob);
+      var a=document.createElement('a'); a.href=url; a.download=fileName(); document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 4000);
+      setBusy(false,'התמונה נשמרה בתיקיית ההורדות.');
+    }catch(e){ console.error(e); setBusy(false,'לא הצלחתי ליצור את התמונה. נסה שוב.'); }
+  });
+
+  var canShareFiles = false;
+  try{ canShareFiles = !!(navigator.canShare && navigator.canShare({ files:[new File([new Blob(['x'],{type:'image/png'})],'t.png',{type:'image/png'})] })); }catch(e){}
+  if(canShareFiles){ $('shareBtn').hidden=false; }
+  $('shareBtn').addEventListener('click', async function(){
+    setBusy(true,'מכין את התמונה…');
+    try{
+      var blob=await makeBlob();
+      var file=new File([blob], fileName(), {type:'image/png'});
+      await navigator.share({ files:[file] });
+      setBusy(false,'');
+    }catch(e){ if(e && e.name==='AbortError'){ setBusy(false,''); } else { console.error(e); setBusy(false,'השיתוף לא הצליח. אפשר לשמור כתמונה ולשלוח ידנית.'); } }
+  });
+
+  render();
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(fit); }
+  if('serviceWorker' in navigator){ window.addEventListener('load', function(){ navigator.serviceWorker.register('sw.js').catch(function(){}); }); }
+})();
+</script>
+</body>
+</html>
