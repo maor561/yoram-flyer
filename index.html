@@ -252,9 +252,9 @@ body{-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
 <script>
 (function(){
   var $ = function(id){ return document.getElementById(id); };
-  var brands = ['skech_adidas','source','nike','blundstone','saucony','papaya','teva','naot','elefanten','tevanaot','redback','redapple','fila','nt'];
+  var brands = ['skech_adidas','source','nike','blundstone','saucony','papaya','nimrod.svg','naot','elefanten','tevanaot','redback','redapple','fila','nt'];
   var fb = $('fBrands');
-  brands.forEach(function(b){ var d=document.createElement('div'); var i=document.createElement('img'); i.src='img/brand_'+b+'.png'; i.alt=''; d.appendChild(i); fb.appendChild(d); });
+  brands.forEach(function(b){ var d=document.createElement('div'); var i=document.createElement('img'); i.src='img/brand_'+(b.indexOf('.')>-1?b:b+'.png'); i.alt=''; d.appendChild(i); fb.appendChild(d); });
 
   var DEFAULTS = { date:'2026-09-06', tStart:'16:00', tEnd:'19:00', city:'שדרות', street:'רחוב המגינים 21', landmark:'ליד פארק המוסיקה',
     p1:'100', d1:'נעלי ספורט', p2:'130', d2:'פפאיה ונמרוד', p3:'100', d3:'סנדלי בן ישי', fighter:true };
