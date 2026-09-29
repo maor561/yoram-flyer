@@ -321,7 +321,13 @@ body{-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
   $('form').addEventListener('change', render);
   $('form').addEventListener('submit', function(e){ e.preventDefault(); });
 
-  function fileName(){ var o=read(); return 'yoram-sale-'+(o.date||'flyer')+'.png'; }
+  function fileName(){
+    var o=read(), d=parseDate(o.date);
+    var dateStr = d ? (d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()) : '';
+    var city = (o.city||'').replace(/[\\\/:*?"<>|.]+/g,' ').replace(/\s+/g,' ').trim();
+    var name = [dateStr, city].filter(Boolean).join(' ') || 'פלייר נעלי יורם';
+    return name + '.png';
+  }
   async function makeBlob(){
     await document.fonts.ready;
     var opts={ width:1080, height:1350, pixelRatio:1, cacheBust:false, style:{ transform:'none', position:'static' } };
